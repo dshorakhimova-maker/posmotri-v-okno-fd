@@ -17,7 +17,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -188,7 +188,7 @@ ol {
   line-height: 16.2px;
   color: #fff;
   -webkit-line-clamp: 4; /* ограничение до 4 строк */
-  line-clamp: 4;  
+  line-clamp: 4;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -221,7 +221,7 @@ ol {
 }
 
 .more-button {
-  width: auto;
+  width: 100%;
   margin-bottom: 2px;
 }
 
@@ -262,7 +262,7 @@ ol {
 }
 
 .search-form__textfield {
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: transparent;
   border: none;
@@ -336,7 +336,7 @@ ol {
 }
 
 .search-form__pseudo-checkbox::after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   background-color: #fff;
