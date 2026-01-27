@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -74,9 +74,22 @@
           <span class="content__accent">По-</span><br />смотри<br />в окно
         </h1>
         <div class="content__list-container">
-          <ul class="content__list">
-            <!-- ЗДЕСЬ ОКАЖУТСЯ ТЕМПЛЕЙТЫ КАРТОЧЕК -->
-          </ul>
+          <ul class="content__list"></ul>
+          <!-- ЗДЕСЬ ТЕМПЛЕЙТЫ КАРТОЧЕК -->
+          <template class="cards-list-item-template">
+            <li class="content__list-item">
+              <a href="#0" class="content__card-link">
+                <article class="content__video-card">
+                  <div class="content__video-card-description-container">
+                    <h2 class="content__video-card-title"></h2>
+                    <p class="content__video-card-description"></p>
+                  </div>
+                  <img src="" alt="" class="content__video-card-thumbnail" />
+                </article>
+              </a>
+            </li>
+          </template>
+          <!-- ЗДЕСЬ ТЕМПЛЕЙТЫ КАРТОЧЕК -->
         </div>
       </section>
     </main>
@@ -94,7 +107,7 @@
       </div>
     </template>
 
-    <template class="cards-list-item-template">
+    <template class="flex-grow">
       <li class="content__list-item">
         <a href="#0" class="content__card-link">
           <article class="content__video-card">
@@ -113,7 +126,7 @@
 
     <template class="error-template">
       <div class="error">
-        <h2 class="error__title">Из этого города нет видео :(</h2>
+        <h2 class="error__title">Из этого города нет видео :</h2>
       </div>
     </template>
     <script src="./scripts/script.js"></script>

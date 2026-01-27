@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  block-size: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  align-items: flex-end;
+  inline-size: 1200px;
+  block-size: 100%;
+  margin: auto;
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  background-color: #1b1919;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Кастомный скроллбар */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(217 217 217 / 10%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+}
+
+.content {
+  display: flex; /*элементы внутри идут в строку */
+  flex-direction: row;
+  justify-content: space-between; /* равномерно распределяем свободное пространство */
+  align-items: stretch; /* растягиваем элементы по высоте контейнера */
+  width: 100%; /* задаём ширину блока */
+  height: 100%; /* задаём высоту блока */
+  gap: 20px; /* отступы между элементами */
+}
+
+.search-form {
+  display: flex; /* элементы внутри идут в строку */
+  justify-content: space-between; /* равномерно распределяем свободное пространство */
+  width: 100%; /* форма занимает всю ширину контейнера */
+}
+
+.content__list-container {
+  height: 400px; /* жёсткая высота контейнера */
+  overflow-y: auto; /* вертикальная прокрутка при переполнении */
+}
+
+.content__details {
+  width: 100%; /* растягиваем на всю ширину контейнера */
+  height: 100%; /* растягиваем на всю высоту контейнера */
+  display: flex; /* включаем флекс для удобного расположения */
+  flex-direction: column; /* элементы идут сверху вниз */
+  padding: 20px; /* общий внутренний отступ (по макету можно менять) */
+}
+
+.content__details-title {
+  margin-bottom: 20px; /* отступ между заголовком и карточками */
+}
+
+.content__cards {
+  flex: 1; /* занимает всё оставшееся пространство */
+  display: grid; /* можно использовать грид для карточек */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px; /* расстояние между карточками */
+}
+
+.result {
+  flex: 1; /* занимает часть пространства */
+  margin-right: 20px; /* отступ справа от блока .result */
+}
+
+.content__details {
+  flex: 2; /* занимает больше пространства */
+}
+
+.result__video-container {
+  width: 100%; /* растягиваем на всю ширину родителя */
+  height: 300px; /* фиксированная высота, можно менять по макету */
+  margin-bottom: 20px; /* внешний отступ снизу */
+  background-color: #000; /* черный фон для видео контейнера */
+}
+
+.result__video-container {
+  width: 100%;
+  height: 300px; /* фиксированная высота контейнера */
+  margin-bottom: 20px; /* отступ снизу */
+  position: relative; /* для вложенного видео */
+  overflow: hidden; /* чтобы ничего не выходило за пределы */
+}
+
+.result__video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* видео заполняет контейнер, сохраняя пропорции */
+}
+
+.content__list {
+  display: flex; /* или grid, в зависимости от макета */
+  flex-direction: column; /* если элементы идут вертикально */
+  gap: 16px; /* расстояние между элементами */
+}
+
+.content__list-item {
+  /* стили для каждого элемента */
+}
+
+.content__list-container {
+  display: flex; /* или grid, в зависимости от макета */
+  flex-direction: column; /* элементы идут сверху вниз */
+  gap: 24px; /* расстояние между карточками и кнопкой */
+}
+
+.content__video-card {
+  display: flex; /* включаем флекс-сетку */
+  flex-direction: row; /* элементы идут в строку */
+  align-items: flex-start; /* прижимаем их к верхней границе контейнера */
+  width: 100%; /* контейнер растягивается по ширине */
+  height: 100%; /* контейнер растягивается по высоте */
+}
+
+.content__video-card-thumbnail {
+  height: 180px; /* фиксированная высота */
+  min-width: 240px; /* минимальная ширина */
+  width: 100%; /* растягиваем по ширине родителя */
+  object-fit: cover; /* изображение заполняет контейнер, сохраняя пропорции */
+  object-position: center; /* центрируем изображение внутри контейнера */
+}
+
+.content__video-card {
+  display: flex; /* включаем флекс-сетку */
+  flex-direction: row; /* элементы идут в строку: картинка + описание */
+  align-items: flex-start; /* прижимаем к верху */
+}
+
+.content__video-card-thumbnail {
+  height: 180px;
+  min-width: 240px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1; /* занимает всё оставшееся пространство */
+  padding-left: 16px; /* отступ слева от картинки */
+}
+
+.search-form__fieldset-title {
+  font-weight: 600; /* полужирный шрифт */
+  font-size: 16px; /* размер текста, можно менять по макету */
+  line-height: 1.4; /* высота строки для читаемости */
+  margin-bottom: 12px; /* отступ снизу от заголовка до содержимого */
+  margin-top: 0; /* убираем лишний верхний отступ */
+}
+
+.title {
+  font-size: 24px; /* размер заголовка */
+  font-weight: 700; /* жирный шрифт */
+  line-height: 1.3; /* удобная высота строки */
+  margin-bottom: 20px; /* отступ снизу */
+  color: #333; /* основной цвет текста */
+}
+
+.title .content__accent {
+  color: #ff5722; /* акцентный цвет (например, оранжевый) */
+  font-weight: 700; /* дополнительное выделение жирным */
+}
+.title {
+  font-size: 24px; /* размер заголовка */
+  font-weight: 700; /* жирный шрифт */
+  line-height: 1.3; /* удобная высота строки */
+  margin-bottom: 20px; /* отступ снизу */
+  color: #333; /* основной цвет текста */
+}
+
+.title .content__accent {
+  color: #ff5722; /* акцентный цвет (например, оранжевый) */
+  font-weight: 700; /* дополнительное выделение жирным */
+}
+
+.content__card-link {
+  text-decoration: none; /* убираем дефолтное подчёркивание */
+  color: #007acc; /* задаём новый цвет текста (пример: синий) */
+  font-weight: 500; /* можно добавить полужирность для акцента */
+}
+
+.content__card-link:hover {
+  text-decoration: underline; /* подчёркивание при наведении (по желанию) */
+  color: #005a99; /* более тёмный оттенок при наведении */
+}
+
+.content__video-card-title {
+  font-size: 18px; /* размер текста */
+  font-weight: 600; /* полужирный шрифт */
+  line-height: 1.4; /* удобная высота строки */
+  color: #333; /* основной цвет текста */
+  overflow: hidden; /* скрываем лишний текст */
+  text-overflow: ellipsis; /* заменяем излишек на "…" */
+  white-space: nowrap; /* не переносим текст на новую строку */
+}
+
+.content__video-card-description {
+  font-size: 14px; /* размер текста по макету */
+  line-height: 1.5; /* значение line-height из макета */
+  color: #555; /* цвет текста */
+  display: -webkit-box; /* включаем флекс-коробку для обрезки */
+  -webkit-line-clamp: 3; /* ограничиваем количество строк (например, 3) */
+  -webkit-box-orient: vertical; /* вертикальная ориентация */
+  overflow: hidden; /* скрываем лишний текст */
+  text-overflow: ellipsis; /* добавляем многоточие */
+}
