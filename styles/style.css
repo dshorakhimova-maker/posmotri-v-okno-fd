@@ -266,7 +266,6 @@ ol {
   font-size: 18px;
   background-color: transparent;
   border: none;
-  letter-spacing: 0;
   width: 225px;
   border-top: 1px solid #ccc; /* линия сверху */
   border-bottom: 1px solid #ccc; /* линия снизу */
@@ -337,7 +336,6 @@ ol {
 
 .search-form__pseudo-checkbox::after {
   content: '';
-  position: absolute;
   display: block;
   background-color: #fff;
   opacity: 0;
@@ -372,7 +370,6 @@ ol {
 }
 
 .preloader {
-  position: absolute;
   top: 211px;
   left: 30px;
   z-index: 1; /* Чтобы быть поверх контента */
