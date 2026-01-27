@@ -92,8 +92,8 @@ ol {
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
-  width: 1140px; /* фиксированная ширина */
-  height: 534px; /* фиксированная высота */
+  width: 1140px;
+  height: 534px;
   gap: 30px;
 }
 
