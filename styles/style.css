@@ -80,7 +80,9 @@ ol {
   line-height: 93%;
   text-transform: uppercase;
   color: inherit;
-  padding-top: 4px;
+  padding-bottom: 3px;
+  padding-left: 1px;
+  letter-spacing: -0.3px;
 }
 
 .content__accent {
